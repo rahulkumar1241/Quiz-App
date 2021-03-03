@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+
+    <!--HEADING-->
+
+
+    <div class="container-fluid bg-dark text-white text-center p-3">
+        <h1 id="headingandscore" style="font-weight:500;font-size: 300%;">Quiz</h1>
+    </div>
+
+
+    <!-- MID-SECTION  -->
+
+    <div id="questioncontainer " class="container p-3  mt-3 questionContainer shadow-lg p-4 mb-4">
+        <h1 id="question"></h1>
+        <form>
+            <!--      DEFAULT OPTION-->
+            <div class="radio p-1" style="display: none">
+                <input type="radio" class="option" name="option" value="default" checked>
+                <label class="optionLabel">Deafault</label>
+            </div>
+
+            <!--      OPTION-1-->
+            <div class="radio p-1">
+                <input type="radio" class="option" name="option" value="">
+                <label class="optionLabel">Option 1</label>
+            </div>
+
+            <!--      OPTION-2-->
+            <div class="radio p-1">
+                <input type="radio" class="option" name="option" value="">
+                <label class="optionLabel">Option 2</label>
+            </div>
+            <!--      OPTION-3-->
+            <div class="radio p-1">
+                <input type="radio" class="option" name="option" value="">
+                <label class="optionLabel">Option 3</label>
+            </div>
+
+            <!--      OPTION-4-->
+            <div class="radio p-1">
+                <input type="radio" class="option" name="option" value="">
+                <label class="optionLabel">Option 4</label>
+            </div>
+        </form>
+
+        <div id="correctanswer" class="alert alert-success" style="width:100px;display: none;">
+            <strong>Correct</strong>
+        </div>
+        <div id="incorrectanswer" class="alert alert-danger" style="width:100px;display: none;">
+            <strong>Incorrect</strong>
+        </div>
+
+        <button type="button" id="submitbutton" class="btn btn-warning" onclick="checkAnswer()" style="display: inline-block">Submit</button>
+        <button type="button" id="nextquestionbutton" class="btn btn-success" onclick="nextQuestion()" style="display: none;">Next</button>
+    </div>
+
+
+    <!--     ANSWERSECTION-->
+
+    <div class="container answerKeyContainer " id="answerkeycontainer">
+        <h1 style="padding: 10px;">Answer key</h1>
+        <div id="answerkey" class="border answers shadow-lg p-4 mb-4">
+        </div>
+        <button type="button" onclick="restart()" class="btn  btn-info mt-3">Restart</button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+body
+{
+ background-color:rgb(238, 238, 221)   
+}
+
+
+.questionContainer
+{
+    display: block;
+    background: white;
+   border-radius: 15px;
+}
+
+.answerKeyContainer
+{
+display: none;
+margin:30px;
+}
+
+
+
+.answers
+{
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+/*    padding: 10px; */
+}
+.individualanswer
+{
+    padding: 15px;
+}
